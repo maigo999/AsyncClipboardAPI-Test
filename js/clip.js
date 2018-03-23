@@ -16,7 +16,7 @@ const copybutton = document.getElementById('click-copy');
 const paste = function(){
 navigator.clipboard.readText()
 .then(function (text) {
-  document.getElementsByClassName('pastespace').innerHTML = text;　// なんで動かないのおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
+  document.getElementsByClassName('pastespace').innerHTML = text; // なんで動かないのおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
   console.log(text)
 }, function () {
   console.log('ペースト失敗');
