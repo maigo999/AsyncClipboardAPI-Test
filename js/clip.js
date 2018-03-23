@@ -1,3 +1,7 @@
+var CountValue = 0;
+function countUp(){
+  CountValue++;
+}
 
 const copy = function () {
     navigator.clipboard.writeText(document.getElementById('copy-text').value)
@@ -13,11 +17,13 @@ const copybutton = document.getElementById('click-copy');
     copy();
   }, false);
 
+
 const paste = function(){
 navigator.clipboard.readText()
 .then(function (text) {
-  document.getElementById('pastespace').innerHTML = text; // なんで動かないのおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
-  console.log(text)
+    countUp();
+    document.getElementsByClassName('paste-space')[CountValue].textContent = text;
+    console.log("クリップボードの中身は「" + text + "」です。")
 }, function () {
   console.log('ペースト失敗');
     });
